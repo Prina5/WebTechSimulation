@@ -1,41 +1,60 @@
-/* ==========================================================
-   ZONES - pressure calculator
-   Lesson hooks: forms, input events, validation, math
-   ========================================================== */
+/* 
+   ZONES PAGE - Dive planner
+   Lesson 8: variables and functions
+   Lesson 9: switch statement, comparison operators,
+             the conditional (ternary) operator
+    */
 
-const form = document.querySelector('#pressure-form');
-const input = document.querySelector('#pressure-depth');
-const output = document.querySelector('#pressure-output');
-const errorEl = document.querySelector('#pressure-error');
+function planDive() {
+  const who = document.getElementById("who").value;
+  const depthText = document.getElementById("plan-depth").value;
+  const depth = Number(depthText);
+  const result = document.getElementById("plan-result");
 
-// Pressure rises by about 1 atmosphere every 10 m, on top of 1 atm of air
-const pressureAt = (depth) => 1 + depth / 10;
-
-function calculate() {
-  const raw = input.value.trim();
-
-  if (raw === '') {
-    errorEl.textContent = '';
-    output.textContent = 'Enter a depth to see the pressure.';
+  if (depthText === "" || isNaN(depth) || depth < 0) {
+    result.className = "result error";
+    result.textContent = "Enter a depth of 0 metres or more.";
     return;
   }
 
-  const depth = Number(raw);
-  if (Number.isNaN(depth) || depth < 0 || depth > MAX_DEPTH) {
-    errorEl.textContent = `Enter a depth between 0 and ${fmt(MAX_DEPTH)} metres.`;
-    output.textContent = '';
-    return;
+  let name;
+  let maxDepth;
+
+  // switch compares ONE value against many possible cases
+  switch (who) {
+    case "scuba":
+      name = "A recreational scuba diver";
+      maxDepth = 40;
+      break;
+    case "whale":
+      name = "A sperm whale";
+      maxDepth = 2000;
+      break;
+    case "alvin":
+      name = "A research submersible like Alvin";
+      maxDepth = 6500;
+      break;
+    case "full":
+      name = "A full-ocean-depth submersible";
+      maxDepth = 11000;
+      break;
+    default:
+      result.className = "result error";
+      result.textContent = "Choose who is diving.";
+      return;
   }
 
-  errorEl.textContent = '';
-  const atm = pressureAt(depth);
-  const zone = zoneAtDepth(depth);
-  output.textContent = `About ${fmt(Math.round(atm))} atmospheres (${zone.name})`;
+  // The conditional operator:  condition
+  const canReach = depth <= maxDepth;
+  const verdict = canReach ? "can" : "cannot";
+
+  let message = name + " " + verdict + " reach " + depth + " m (limit: about " + maxDepth + " m).";
+
+  if (!canReach) {
+    const shortBy = depth - maxDepth;
+    message = message + " It would fall short by " + shortBy + " m.";
+  }
+
+  result.className = canReach ? "result success" : "result error";
+  result.textContent = message;
 }
-
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  calculate();
-});
-input.addEventListener('input', calculate);
-calculate();

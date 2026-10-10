@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Your Name">
+  <meta name="description" content="Send a question about the deep ocean.">
+  <title>Contact | Fathom</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <a class="site-name" href="index.html">Fathom</a>
+      <nav aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="zones.html">Zones</a></li>
+          <li><a href="creatures.html">Creatures</a></li>
+          <li><a href="quiz.html">Quiz</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <section id="top">
+        <h1>Ask a diver</h1>
+        <p>Have a question about the deep ocean? Fill in the form below. It is a practice form, so it checks your answers but does not send anything.</p>
+      </section>
+
+      <section>
+        <form onsubmit="return checkForm()">
+          <label for="name">Your name</label>
+          <input type="text" id="name" autocomplete="name">
+
+          <label for="email">Email address</label>
+          <input type="email" id="email" autocomplete="email">
+
+          <label for="topic">Topic</label>
+          <select id="topic">
+            <option value="">Choose a topic</option>
+            <option value="zones">The ocean zones</option>
+            <option value="animals">Deep-sea animals</option>
+            <option value="other">Something else</option>
+          </select>
+
+          <label for="message">Your message</label>
+          <textarea id="message"></textarea>
+
+          <button type="submit">Send question</button>
+          <div id="form-result" class="result" role="status">Form messages will appear here.</div>
+        </form>
+      </section>
+
+      <section>
+        <h2>Other ways to reach us</h2>
+        <ul>
+          <li><a href="mailto:hello@princemwinefobon@gmail.com?subject=Question%20about%20Fathom">Email Us</a></li>
+          <li><a href="zones.html#planner">Jump to the dive planner</a></li>
+          <li><a href="https://oceanexplorer.noaa.gov" target="_blank" rel="noopener">NOAA Ocean Exploration. </a></li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>Fathom is a practice project built with HTML, CSS and JavaScript.</p>
+      <p><a href="#top">Back to top</a></p>
+    </div>
+  </footer>
+  <script src="js/contact.js"></script>
+</body>
+</html>

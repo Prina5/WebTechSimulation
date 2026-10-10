@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 260" width="200" height="260" role="img" aria-label="A giant squid">
+  <path d="M100 10 Q145 50 135 120 L65 120 Q55 50 100 10 Z" fill="#c9a2f2"/>
+  <path d="M100 10 L80 40 L100 30 L120 40 Z" fill="#a47bd0"/>
+  <ellipse cx="100" cy="125" rx="38" ry="18" fill="#a47bd0"/>
+  <circle cx="82" cy="125" r="13" fill="#e8f6f6"/>
+  <circle cx="118" cy="125" r="13" fill="#e8f6f6"/>
+  <circle cx="82" cy="125" r="6" fill="#04141c"/>
+  <circle cx="118" cy="125" r="6" fill="#04141c"/>
+  <g fill="none" stroke="#c9a2f2" stroke-width="6" stroke-linecap="round">
+    <path d="M70 140 Q50 190 65 245"/>
+    <path d="M85 142 Q80 195 90 250"/>
+    <path d="M100 143 Q100 200 100 255"/>
+    <path d="M115 142 Q120 195 110 250"/>
+    <path d="M130 140 Q150 190 135 245"/>
+  </g>
+</svg>

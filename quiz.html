@@ -3,47 +3,83 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Your Name">
+  <meta name="description" content="Test what you know about the deep ocean.">
   <title>Quiz | Fathom</title>
-  <meta name="description" content="Six questions about the deep ocean.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
+  <header>
     <div class="wrap">
-      <a class="brand" href="index.html">Fathom</a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <a class="site-name" href="index.html">Fathom</a>
       <nav aria-label="Main">
-        <ul class="nav-links" id="nav-links">
-          <li><a href="index.html">Descend</a></li>
-          <li><a href="creatures.html">Field guide</a></li>
+        <ul>
+          <li><a href="index.html">Home</a></li>
           <li><a href="zones.html">Zones</a></li>
-          <li><a href="log.html">Dive log</a></li>
-          <li><a href="quiz.html">Quiz</a></li>
+          <li><a href="creatures.html">Creatures</a></li>
+          <li><a href="quiz.html" aria-current="page">Quiz</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main id="main">
-    <header class="page-head">
-      <div class="wrap">
+  <main>
+    <div class="wrap">
+      <section id="top">
         <h1>Deep-sea quiz</h1>
-        <p>Six questions. You get the answer and a short explanation after each one.</p>
-      </div>
-    </header>
-    <div class="wrap section">
-      <div class="quiz" id="quiz-area"></div>
+        <p>Five questions. Pick one answer for each, then check your score.</p>
+      </section>
+
+      <form onsubmit="return false">
+        <fieldset>
+          <legend>Question 1: Pressure rises by about how much for every 10 metres of seawater?</legend>
+          <label><input type="radio" name="q1" value="a"> 0.1 atmosphere</label>
+          <label><input type="radio" name="q1" value="b"> 1 atmosphere</label>
+          <label><input type="radio" name="q1" value="c"> 10 atmospheres</label>
+          <label><input type="radio" name="q1" value="d"> 100 atmospheres</label>
+        </fieldset>
+        <fieldset>
+          <legend>Question 2: Which zone is called the twilight zone?</legend>
+          <label><input type="radio" name="q2" value="a"> 0 to 200 m</label>
+          <label><input type="radio" name="q2" value="b"> 1,000 to 4,000 m</label>
+          <label><input type="radio" name="q2" value="c"> 200 to 1,000 m</label>
+          <label><input type="radio" name="q2" value="d"> 6,000 m and below</label>
+        </fieldset>
+        <fieldset>
+          <legend>Question 3: What makes an anglerfish lure glow?</legend>
+          <label><input type="radio" name="q3" value="a"> Bacteria living inside it</label>
+          <label><input type="radio" name="q3" value="b"> Electricity</label>
+          <label><input type="radio" name="q3" value="c"> Sunlight stored in its skin</label>
+          <label><input type="radio" name="q3" value="d"> Burning gas</label>
+        </fieldset>
+        <fieldset>
+          <legend>Question 4: Where is the deepest known point in the ocean?</legend>
+          <label><input type="radio" name="q4" value="a"> Puerto Rico Trench</label>
+          <label><input type="radio" name="q4" value="b"> Java Trench</label>
+          <label><input type="radio" name="q4" value="c"> Mid-Atlantic Ridge</label>
+          <label><input type="radio" name="q4" value="d"> Challenger Deep, Mariana Trench</label>
+        </fieldset>
+        <fieldset>
+          <legend>Question 5: Which animal has the largest eyes?</legend>
+          <label><input type="radio" name="q5" value="a"> Blue whale</label>
+          <label><input type="radio" name="q5" value="b"> Giant squid</label>
+          <label><input type="radio" name="q5" value="c"> Barreleye</label>
+          <label><input type="radio" name="q5" value="d"> Sperm whale</label>
+        </fieldset>
+        <button type="button" onclick="checkQuiz()">Check my answers</button>
+        <div id="quiz-result" class="result" role="status">Your score will appear here.</div>
+      </form>
     </div>
   </main>
-  <footer class="site-footer">
-    <div class="wrap"><p>Fathom is a practice project built with HTML, CSS and JavaScript. &copy; <span id="year">2026</span></p></div>
+
+  <footer>
+    <div class="wrap">
+      <p>Fathom is a practice project built with HTML, CSS and JavaScript.</p>
+      <p><a href="#top">Back to top</a></p>
+    </div>
   </footer>
-  <script src="js/data.js"></script>
-  <script src="js/main.js"></script>
   <script src="js/quiz.js"></script>
 </body>
 </html>

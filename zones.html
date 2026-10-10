@@ -3,108 +3,118 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Your Name">
+  <meta name="description" content="Light, temperature and depth in each layer of the ocean, plus a dive planner.">
   <title>The five zones | Fathom</title>
-  <meta name="description" content="Light, temperature and pressure in each layer of the ocean.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
+  <header>
     <div class="wrap">
-      <a class="brand" href="index.html">Fathom</a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <a class="site-name" href="index.html">Fathom</a>
       <nav aria-label="Main">
-        <ul class="nav-links" id="nav-links">
-          <li><a href="index.html">Descend</a></li>
-          <li><a href="creatures.html">Field guide</a></li>
-          <li><a href="zones.html">Zones</a></li>
-          <li><a href="log.html">Dive log</a></li>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="zones.html" aria-current="page">Zones</a></li>
+          <li><a href="creatures.html">Creatures</a></li>
           <li><a href="quiz.html">Quiz</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main id="main">
-    <header class="page-head">
-      <div class="wrap">
+  <main>
+    <div class="wrap">
+      <section id="top">
         <h1>The five zones</h1>
-        <p>The ocean is layered. Each layer is defined by how much light reaches it, and that shapes everything that lives there.</p>
-      </div>
-    </header>
+        <p>The ocean is layered. Each layer is defined by how much sunlight reaches it, and that shapes everything that lives there.</p>
+      </section>
 
-    <div class="wrap section" style="padding-bottom:2rem">
-      <div class="table-wrap">
-        <table>
-          <caption>Conditions in each ocean zone (approximate values)</caption>
-          <thead>
-            <tr><th scope="col">Zone</th><th scope="col">Depth</th><th scope="col">Light</th><th scope="col">Temperature</th><th scope="col">Pressure (atmospheres)</th></tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row"><span class="swatch" style="--zone:#8fe9e4"></span>Sunlight zone</th>
-              <td>0 to 200 m</td><td>Bright; plants and algae can grow</td><td>Varies by place and season</td><td>1 to 21</td>
-            </tr>
-            <tr>
-              <th scope="row"><span class="swatch" style="--zone:#5db7d6"></span>Twilight zone</th>
-              <td>200 to 1,000 m</td><td>Dim blue glow; no photosynthesis</td><td>Falls quickly with depth</td><td>21 to 101</td>
-            </tr>
-            <tr>
-              <th scope="row"><span class="swatch" style="--zone:#9aa8f5"></span>Midnight zone</th>
-              <td>1,000 to 4,000 m</td><td>None; only living light</td><td>About 2 to 4 °C</td><td>101 to 401</td>
-            </tr>
-            <tr>
-              <th scope="row"><span class="swatch" style="--zone:#c9a2f2"></span>Abyssal zone</th>
-              <td>4,000 to 6,000 m</td><td>None</td><td>About 1 to 3 °C</td><td>401 to 601</td>
-            </tr>
-            <tr>
-              <th scope="row"><span class="swatch" style="--zone:#ff9aa8"></span>Hadal zone</th>
-              <td>6,000 to 11,000 m</td><td>None</td><td>About 1 to 4 °C</td><td>601 to 1,100</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+      <section>
+        <h2>Zones at a glance</h2>
+        <div class="table-wrap">
+          <table>
+            <caption>Conditions in each ocean zone (approximate values)</caption>
+            <thead>
+              <tr>
+                <th rowspan="2" scope="col">Zone</th>
+                <th colspan="2" scope="colgroup">Depth (metres)</th>
+                <th rowspan="2" scope="col">Light</th>
+                <th rowspan="2" scope="col">Temperature</th>
+              </tr>
+              <tr>
+                <th scope="col">From</th>
+                <th scope="col">To</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Sunlight</th>
+                <td>0</td><td>200</td>
+                <td>Bright. Plants and algae can grow.</td>
+                <td>Varies by place and season</td>
+              </tr>
+              <tr>
+                <th scope="row">Twilight</th>
+                <td>200</td><td>1,000</td>
+                <td>A dim blue glow. No photosynthesis.</td>
+                <td>Falls quickly with depth</td>
+              </tr>
+              <tr>
+                <th scope="row">Midnight</th>
+                <td>1,000</td><td>4,000</td>
+                <td>None. Only living light.</td>
+                <td>About 2 to 4 °C</td>
+              </tr>
+              <tr>
+                <th scope="row">Abyssal</th>
+                <td>4,000</td><td>6,000</td>
+                <td>None.</td>
+                <td>About 1 to 3 °C</td>
+              </tr>
+              <tr>
+                <th scope="row">Hadal</th>
+                <td>6,000</td><td>11,000</td>
+                <td>None.</td>
+                <td>About 1 to 4 °C</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="5">Pressure rises by about one atmosphere for every 10 metres of depth.</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </section>
 
-      <div class="two-col">
-        <section aria-labelledby="calc-title">
-          <h2 id="calc-title">Pressure calculator</h2>
-          <p>Pressure grows by about one atmosphere for every 10 metres you descend. Try a depth.</p>
-          <form class="calc" id="pressure-form" novalidate>
-            <div class="field" style="margin-bottom:0">
-              <label for="pressure-depth">Depth in metres</label>
-              <input type="number" id="pressure-depth" inputmode="numeric" min="0" max="11000" value="1000" aria-describedby="pressure-error">
-              <p class="field-error" id="pressure-error" role="alert"></p>
-            </div>
-            <output id="pressure-output" for="pressure-depth"></output>
-          </form>
-        </section>
-
-        <section aria-labelledby="faq-title">
-          <h2 id="faq-title">Common questions</h2>
-          <details>
-            <summary>Why is the deep sea so cold?</summary>
-            <p>Sunlight only warms the top layer. Cold, dense water from the poles sinks and spreads along the bottom of the ocean.</p>
-          </details>
-          <details>
-            <summary>Why don't deep animals get crushed?</summary>
-            <p>Many have bodies made mostly of water and no air spaces, so the pressure inside matches the pressure outside.</p>
-          </details>
-          <details>
-            <summary>How do we know what lives down there?</summary>
-            <p>Crewed submersibles, remotely operated vehicles, baited cameras and nets all bring back samples and video.</p>
-          </details>
-        </section>
-      </div>
+      <section id="planner">
+        <h2>Dive planner</h2>
+        <p>Choose who is diving, enter a depth, and see whether they can get there.</p>
+        <label for="who">Who is diving?</label>
+        <select id="who">
+          <option value="">Choose one</option>
+          <option value="scuba">Scuba diver</option>
+          <option value="whale">Sperm whale</option>
+          <option value="alvin">Research submersible</option>
+          <option value="full">Full-ocean-depth submersible</option>
+        </select>
+        <label for="plan-depth">Depth in metres</label>
+        <input type="number" id="plan-depth" min="0" placeholder="For example 3000">
+        <button type="button" onclick="planDive()">Check the dive</button>
+        <div id="plan-result" class="result" role="status">Your result will appear here.</div>
+      </section>
     </div>
   </main>
-  <footer class="site-footer">
-    <div class="wrap"><p>Fathom is a practice project built with HTML, CSS and JavaScript. &copy; <span id="year">2026</span></p></div>
+
+  <footer>
+    <div class="wrap">
+      <p>Fathom is a practice project built with HTML, CSS and JavaScript.</p>
+      <p><a href="#top">Back to top</a></p>
+    </div>
   </footer>
-  <script src="js/data.js"></script>
-  <script src="js/main.js"></script>
   <script src="js/zones.js"></script>
 </body>
 </html>

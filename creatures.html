@@ -3,70 +3,101 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Field guide | Fathom</title>
-  <meta name="description" content="Deep-sea animals sorted by the zone they live in.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+  <meta name="author" content="Your Name">
+  <meta name="description" content="Meet a moon jelly, a giant squid and an anglerfish.">
+  <title>Creatures of the deep | Fathom</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
+  <header>
     <div class="wrap">
-      <a class="brand" href="index.html">Fathom</a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <a class="site-name" href="index.html">Fathom</a>
       <nav aria-label="Main">
-        <ul class="nav-links" id="nav-links">
-          <li><a href="index.html">Descend</a></li>
-          <li><a href="creatures.html">Field guide</a></li>
+        <ul>
+          <li><a href="index.html">Home</a></li>
           <li><a href="zones.html">Zones</a></li>
-          <li><a href="log.html">Dive log</a></li>
+          <li><a href="creatures.html" aria-current="page">Creatures</a></li>
           <li><a href="quiz.html">Quiz</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main id="main">
-    <header class="page-head">
-      <div class="wrap">
-        <h1>Field guide</h1>
-        <p>Fourteen animals from the surface to the trenches. The bar on each card shows how deep it lives.</p>
-      </div>
-    </header>
-    <div class="wrap section" style="padding-top:1rem">
-      <div class="toolbar">
-        <div class="field search" style="margin-bottom:0">
-          <label for="search">Search by name</label>
-          <input type="search" id="search" placeholder="Try squid or Aurelia" autocomplete="off">
-        </div>
-        <div>
-          <p class="hint" style="margin-bottom:0.35rem" id="chips-label">Filter by zone</p>
-          <div class="chips" id="chips" role="group" aria-labelledby="chips-label"></div>
-        </div>
-      </div>
-      <p class="count" id="count" aria-live="polite"></p>
-      <div class="creature-grid" id="creature-grid"></div>
-    </div>
+  <main>
+    <div class="wrap">
+      <section id="top">
+        <h1>Creatures of the deep</h1>
+        <p>Three animals, one from each of the first three zones. Press a button to reveal a fact.</p>
+      </section>
 
-    <dialog id="detail" aria-labelledby="detail-name">
-      <h2 id="detail-name"></h2>
-      <p class="latin" id="detail-latin"></p>
-      <p id="detail-fact"></p>
-      <dl>
-        <dt>Zone</dt><dd id="detail-zone"></dd>
-        <dt>Depth</dt><dd id="detail-depth"></dd>
-        <dt>Size</dt><dd id="detail-size"></dd>
-      </dl>
-      <button type="button" class="btn" id="detail-close">Close</button>
-    </dialog>
+      <section>
+        <div class="cards">
+        <article class="card">
+          <figure>
+            <img src="images/jellyfish.svg" width="200" height="240" loading="lazy" alt="A pale, round jellyfish with four rings on its bell and trailing tentacles.">
+            <figcaption>Illustration of a moon jelly</figcaption>
+          </figure>
+          <h2>Moon jelly</h2>
+          <p><span class="tag">Sunlight zone</span></p>
+          <dl>
+            <dt>Depth</dt><dd>0 to 50 m</dd>
+            <dt>Size</dt><dd>Up to 40 cm wide</dd>
+          </dl>
+          <button type="button" onclick="toggleFact('fact-jelly', this)">Show a fact</button>
+          <p class="fact" id="fact-jelly">The four pale rings you can see through its bell are its reproductive organs.</p>
+        </article>
+        <article class="card">
+          <figure>
+            <img src="images/squid.svg" width="200" height="260" loading="lazy" alt="A purple squid with two very large eyes and five long tentacles.">
+            <figcaption>Illustration of a giant squid</figcaption>
+          </figure>
+          <h2>Giant squid</h2>
+          <p><span class="tag">Twilight zone</span></p>
+          <dl>
+            <dt>Depth</dt><dd>300 to 1,000 m</dd>
+            <dt>Size</dt><dd>Up to about 13 m long</dd>
+          </dl>
+          <button type="button" onclick="toggleFact('fact-squid', this)">Show a fact</button>
+          <p class="fact" id="fact-squid">It has the largest eyes of any animal, about the size of a dinner plate.</p>
+        </article>
+        <article class="card">
+          <figure>
+            <img src="images/anglerfish.svg" width="260" height="200" loading="lazy" alt="A dark anglerfish with sharp teeth and a glowing lure dangling above its mouth.">
+            <figcaption>Illustration of an anglerfish</figcaption>
+          </figure>
+          <h2>Anglerfish</h2>
+          <p><span class="tag">Midnight zone</span></p>
+          <dl>
+            <dt>Depth</dt><dd>1,000 to 4,000 m</dd>
+            <dt>Size</dt><dd>Females up to about 1 m</dd>
+          </dl>
+          <button type="button" onclick="toggleFact('fact-angler', this)">Show a fact</button>
+          <p class="fact" id="fact-angler">Its lure glows because glowing bacteria live inside it.</p>
+        </article>
+        </div>
+      </section>
+
+      <section>
+        <h2>More animals to look up</h2>
+        <ul>
+          <li>Lanternfish, a small fish covered in light organs</li>
+          <li>Barreleye, a fish with a see-through head</li>
+          <li>Vampire squid, which can flip its arms over its body</li>
+          <li>Yeti crab, found near hot vents on the seafloor</li>
+        </ul>
+        <p>Compare their homes on the <a href="zones.html">zones page</a>.</p>
+      </section>
+    </div>
   </main>
-  <footer class="site-footer">
-    <div class="wrap"><p>Fathom is a practice project built with HTML, CSS and JavaScript. &copy; <span id="year">2026</span></p></div>
+
+  <footer>
+    <div class="wrap">
+      <p>Fathom is a practice project built with HTML, CSS and JavaScript.</p>
+      <p><a href="#top">Back to top</a></p>
+    </div>
   </footer>
-  <script src="js/data.js"></script>
-  <script src="js/main.js"></script>
   <script src="js/creatures.js"></script>
 </body>
 </html>
