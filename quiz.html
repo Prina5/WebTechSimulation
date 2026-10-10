@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quiz | Fathom</title>
+  <meta name="description" content="Six questions about the deep ocean.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">Fathom</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <nav aria-label="Main">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Descend</a></li>
+          <li><a href="creatures.html">Field guide</a></li>
+          <li><a href="zones.html">Zones</a></li>
+          <li><a href="log.html">Dive log</a></li>
+          <li><a href="quiz.html">Quiz</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <header class="page-head">
+      <div class="wrap">
+        <h1>Deep-sea quiz</h1>
+        <p>Six questions. You get the answer and a short explanation after each one.</p>
+      </div>
+    </header>
+    <div class="wrap section">
+      <div class="quiz" id="quiz-area"></div>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap"><p>Fathom is a practice project built with HTML, CSS and JavaScript. &copy; <span id="year">2026</span></p></div>
+  </footer>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/quiz.js"></script>
+</body>
+</html>

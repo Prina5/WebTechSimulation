@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fathom: how deep can you go?</title>
+  <meta name="description" content="Sink from the surface to the bottom of the ocean and see what lives at each depth.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">Fathom</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <nav aria-label="Main">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Descend</a></li>
+          <li><a href="creatures.html">Field guide</a></li>
+          <li><a href="zones.html">Zones</a></li>
+          <li><a href="log.html">Dive log</a></li>
+          <li><a href="quiz.html">Quiz</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="hero">
+      <div class="wrap hero-grid">
+        <h1 class="hero-title">How deep can you go?</h1>
+        <p class="hero-lead">Drag the slider to sink from the surface to the bottom of the Mariana Trench. Watch the sea darken as the light runs out.</p>
+        <div class="readout"><span class="depth-value" id="depth-value">0</span><span class="depth-unit">metres</span></div>
+        <p class="zone-name" id="zone-name">Sunlight zone</p>
+        <p class="zone-note" id="zone-note"></p>
+        <aside class="meet" aria-label="Animals at this depth">
+          <h2>You might meet</h2>
+          <ul id="meet-list"></ul>
+        </aside>
+        <div class="slider-block">
+          <label for="depth-slider" class="sr-only">Depth</label>
+          <input type="range" id="depth-slider" min="0" max="1000" value="0" step="1">
+          <div class="zone-strip" id="zone-strip" aria-hidden="true"></div>
+          <div class="slider-actions">
+            <button class="btn" id="dive-btn" type="button">Dive automatically</button>
+            <span class="hint" style="color:var(--foam);opacity:.8">The slider is stretched so the shallow zones get room to breathe.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap section">
+      <h2>Keep exploring</h2>
+      <ul class="route-list">
+        <li><a href="creatures.html"><strong>Field guide</strong><span>Fourteen animals, filterable by zone, each with its depth range.</span></a></li>
+        <li><a href="zones.html"><strong>The five zones</strong><span>Light, temperature and pressure at every level, plus a pressure calculator.</span></a></li>
+        <li><a href="log.html"><strong>Dive log</strong><span>Record your own sightings. Entries stay on this device.</span></a></li>
+        <li><a href="quiz.html"><strong>Quiz</strong><span>Six questions on pressure, light and strange animals.</span></a></li>
+      </ul>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap"><p>Fathom is a practice project built with HTML, CSS and JavaScript. &copy; <span id="year">2026</span></p></div>
+  </footer>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

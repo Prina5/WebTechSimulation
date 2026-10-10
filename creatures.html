@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Field guide | Fathom</title>
+  <meta name="description" content="Deep-sea animals sorted by the zone they live in.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">Fathom</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <nav aria-label="Main">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Descend</a></li>
+          <li><a href="creatures.html">Field guide</a></li>
+          <li><a href="zones.html">Zones</a></li>
+          <li><a href="log.html">Dive log</a></li>
+          <li><a href="quiz.html">Quiz</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <header class="page-head">
+      <div class="wrap">
+        <h1>Field guide</h1>
+        <p>Fourteen animals from the surface to the trenches. The bar on each card shows how deep it lives.</p>
+      </div>
+    </header>
+    <div class="wrap section" style="padding-top:1rem">
+      <div class="toolbar">
+        <div class="field search" style="margin-bottom:0">
+          <label for="search">Search by name</label>
+          <input type="search" id="search" placeholder="Try squid or Aurelia" autocomplete="off">
+        </div>
+        <div>
+          <p class="hint" style="margin-bottom:0.35rem" id="chips-label">Filter by zone</p>
+          <div class="chips" id="chips" role="group" aria-labelledby="chips-label"></div>
+        </div>
+      </div>
+      <p class="count" id="count" aria-live="polite"></p>
+      <div class="creature-grid" id="creature-grid"></div>
+    </div>
+
+    <dialog id="detail" aria-labelledby="detail-name">
+      <h2 id="detail-name"></h2>
+      <p class="latin" id="detail-latin"></p>
+      <p id="detail-fact"></p>
+      <dl>
+        <dt>Zone</dt><dd id="detail-zone"></dd>
+        <dt>Depth</dt><dd id="detail-depth"></dd>
+        <dt>Size</dt><dd id="detail-size"></dd>
+      </dl>
+      <button type="button" class="btn" id="detail-close">Close</button>
+    </dialog>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap"><p>Fathom is a practice project built with HTML, CSS and JavaScript. &copy; <span id="year">2026</span></p></div>
+  </footer>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/creatures.js"></script>
+</body>
+</html>
